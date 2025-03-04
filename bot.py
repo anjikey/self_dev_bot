@@ -2,7 +2,7 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from aiogram.utils import executor
+from aiogram import executor
 
 # Твой токен бота (лучше хранить в переменных окружения)
 TOKEN = "ТВОЙ_ТОКЕН_БОТА"
