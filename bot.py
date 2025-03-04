@@ -4,7 +4,9 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # Твой токен бота (лучше хранить в переменных окружения)
-TOKEN = "ТВОЙ_ТОКЕН_БОТА"
+import os
+TOKEN = os.getenv("TOKEN")
+
 
 # Логирование
 logging.basicConfig(level=logging.INFO)
