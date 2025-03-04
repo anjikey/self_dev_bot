@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Создание бота и диспетчера
 bot = Bot(token=TOKEN)
-dp = Dispatcher(bot)
+dp = Dispatcher(bot=bot)  
 
 # Клавиатура
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
