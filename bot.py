@@ -2,7 +2,11 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from aiogram.utils.executor import start_polling
+from aiogram import Dispatcher
+from aiogram import Bot
+from aiogram.types import Message
+from aiogram import executor  # ВОТ ТАК ПРАВИЛЬНО
+
 
 # Твой токен бота (лучше хранить в переменных окружения)
 TOKEN = "ТВОЙ_ТОКЕН_БОТА"
@@ -26,5 +30,6 @@ async def start_command(message: types.Message):
 
 # Запуск бота
 if __name__ == "__main__":
-    start_polling(dp, skip_updates=True)
+    executor.start_polling(dp, skip_updates=True)
+
 
