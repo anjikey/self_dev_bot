@@ -2,11 +2,6 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from aiogram import Dispatcher
-from aiogram import Bot
-from aiogram.types import Message
-from aiogram.utils import executor
-
 
 # Твой токен бота (лучше хранить в переменных окружения)
 TOKEN = "ТВОЙ_ТОКЕН_БОТА"
@@ -20,7 +15,7 @@ dp = Dispatcher(bot)
 
 # Клавиатура
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-buttons = [KeyboardButton("📅 Заполнить дневник"), KeyboardButton("🎯 Цели"), KeyboardButton("🏋️ Спорт")]
+buttons = [KeyboardButton("📝 Заполнить дневник"), KeyboardButton("🎯 Цели"), KeyboardButton("🏋️‍♂️ Спорт")]
 keyboard.add(*buttons)
 
 # Обработчик команды /start
@@ -29,7 +24,8 @@ async def start_command(message: types.Message):
     await message.answer("Привет! Я твой коуч-бот по саморазвитию. Чем займемся сегодня?", reply_markup=keyboard)
 
 # Запуск бота
+async def main():
+    await dp.start_polling(bot)
+
 if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
-
-
+    asyncio.run(main())
