@@ -5,7 +5,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram import Dispatcher
 from aiogram import Bot
 from aiogram.types import Message
-from aiogram import executor  # ВОТ ТАК ПРАВИЛЬНО
+from aiogram.utils import executor
 
 
 # Твой токен бота (лучше хранить в переменных окружения)
