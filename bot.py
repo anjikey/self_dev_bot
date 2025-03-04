@@ -2,7 +2,7 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from aiogram import executor
+from aiogram.utils.executor import start_polling
 
 # Твой токен бота (лучше хранить в переменных окружения)
 TOKEN = "ТВОЙ_ТОКЕН_БОТА"
